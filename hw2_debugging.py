@@ -1,36 +1,42 @@
+
+"""This module consists of two methods that together, perform the Merge Sort algorithm on an array,
+returning a sorted array. """
 import rand
 
-def mergeSort(arr):
-    if (len(arr) == 1):
-        return arr
 
-    half = len(arr)//2
+def merge_sort(array):
+    """This function is the parent merge sort algorithm."""
+    if len(array) == 1:
+        return array
 
-    return recombine(mergeSort(arr[:half]), mergeSort(arr[half:]))
+    half = len(array) // 2
 
-def recombine(leftArr, rightArr):
-    leftIndex = 0
-    rightIndex = 0
-    mergeArr = [None] * (len(leftArr) + len(rightArr))
-    while leftIndex < len(leftArr) and rightIndex < len(rightArr):
-        if leftArr[leftIndex] < rightArr[rightIndex]:
-            rightIndex += 1
-            mergeArr[leftIndex + rightIndex] = leftArr[leftIndex]
+    return recombine(merge_sort(array[:half]), merge_sort(array[half:]))
+
+
+def recombine(left_array, right_array):
+    """This function sorts and recombines the two arrays."""
+    left_index = 0
+    right_index = 0
+    merged_array = [None] * (len(left_array) + len(right_array))
+    while left_index < len(left_array) and right_index < len(right_array):
+        if left_array[left_index] < right_array[right_index]:
+            right_index += 1
+            merged_array[left_index + right_index] = left_array[left_index]
         else:
-            leftIndex += 1
-            mergeArr[leftIndex + rightIndex] = rightArr[rightIndex]
+            left_index += 1
+            merged_array[left_index + right_index] = right_array[right_index]
 
-    for i in range(rightIndex, len(rightArr)):
-        mergeArr[leftIndex + rightIndex] = rightArr[i]
-    
-    for i in range(leftIndex, len(leftArr)):
-        mergeArr[leftIndex + rightIndex] = leftArr[i]
+    for i in range(right_index, len(right_array)):
+        merged_array[left_index + right_index] = right_array[i]
 
-    return mergeArr
+    for i in range(left_index, len(left_array)):
+        merged_array[left_index + right_index] = left_array[i]
+
+    return merged_array
+
 
 arr = rand.random_array([None] * 20)
-arr_out = mergeSort(arr)
+arr_out = merge_sort(arr)
 
 print(arr_out)
-
-
