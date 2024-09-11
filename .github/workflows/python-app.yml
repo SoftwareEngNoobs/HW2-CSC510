@@ -28,18 +28,27 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Install packages
-      run: pip install autopep8 
+      run: |
+        pip install autopep8
+        pip install pyright
     - name: Run autopep8
       run: |
         autopep8 --aggressive --diff rand.py hw2_debugging.py > ./post_traces/autopep8_trace.txt
         autopep8 --in-place --aggressive rand.py hw2_debugging.py
-        
     - name: Upload autopep8 Trace
       uses: actions/upload-artifact@v3
       with:
         name: autopep8-trace
         path: ./post_traces/autopep8_trace.txt
         if-no-files-found: warn  # This will upload the artifact even if no changes were made
+    - name: Run Pyright
+      run: pyright --verbose hw2_debugging.py rand.py > ./post_traces/pyright_trace.txt
+    - name: Upload Pyright Trace
+      uses: actions/upload-artifact@v3
+      with:
+        name: pyright-trace
+        path: ./post_traces/pyright_trace.txt
+        if-not-files-found: warn
 
     # - name: Test with pytest
     #   run: |
