@@ -6,5 +6,6 @@
 ### Static Analysis Tools Used:
 1. <strong>PyLint</strong>: https://github.com/pylint-dev/pylint
 2. <strong>AutoPEP8</strong>: https://github.com/hhatto/autopep8
+3. <strong>Pyright</strong>: https://github.com/microsoft/pyright
 
 ### Welcome to our Repository :)
