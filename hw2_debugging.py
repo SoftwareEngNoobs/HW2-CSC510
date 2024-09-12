@@ -21,17 +21,17 @@ def recombine(left_array, right_array):
     merged_array = [None] * (len(left_array) + len(right_array))
     while left_index < len(left_array) and right_index < len(right_array):
         if left_array[left_index] < right_array[right_index]:
-            right_index += 1
             merged_array[left_index + right_index] = left_array[left_index]
-        else:
             left_index += 1
+        else:
             merged_array[left_index + right_index] = right_array[right_index]
+            right_index += 1
 
     for i in range(right_index, len(right_array)):
-        merged_array[left_index + right_index] = right_array[i]
+        merged_array[left_index + i] = right_array[i]
 
     for i in range(left_index, len(left_array)):
-        merged_array[left_index + right_index] = left_array[i]
+        merged_array[i + right_index] = left_array[i]
 
     return merged_array
 

@@ -1,3 +1,4 @@
+No include entries specified; assuming /workspaces/HW2-CSC510
 Auto-excluding **/node_modules
 Auto-excluding **/__pycache__
 Auto-excluding **/.*
@@ -10,7 +11,7 @@ Search paths for file:///workspaces/HW2-CSC510
   /home/codespace/.python/current/lib/python3.12/lib-dynload
   /home/codespace/.local/lib/python3.12/site-packages
   /home/codespace/.python/current/lib/python3.12/site-packages
-Found 2 source files
+Found 3 source files
 pyright 1.1.380
 0 errors, 0 warnings, 0 informations 
-Completed in 1.067sec
+Completed in 1.04sec
