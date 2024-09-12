@@ -1,3 +1,5 @@
+*************************** Output given after modifications were made ***************************
+
 No include entries specified; assuming /workspaces/HW2-CSC510
 Auto-excluding **/node_modules
 Auto-excluding **/__pycache__
