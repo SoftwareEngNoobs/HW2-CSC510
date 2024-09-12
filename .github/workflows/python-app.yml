@@ -54,7 +54,7 @@ jobs:
       uses: Silleellie/pylint-github-action@v2
       with:
         lint-path: hw2_debugging.py
-        python-version: 3.13.0-rc.2
+        python-version: 3.13.0-rc.1
     - name: Run tests with coverage report 
       run: |
         pytest --cov=. --cov-report=json:coverage.json --continue-on-collection-errors
