@@ -1,7 +1,7 @@
 # HW2-CSC510
 
 <img src="https://img.shields.io/badge/Language-Python-yellow" />  <img src="https://img.shields.io/badge/Platform-Linux-blue" /> [![HW2-CSC510 Workflow](https://github.com/SoftwareEngNoobs/HW2-CSC510/actions/workflows/python-app.yml/badge.svg)](https://github.com/SoftwareEngNoobs/HW2-CSC510/actions/workflows/python-app.yml)  <img src="https://img.shields.io/badge/License-MIT-green.svg" href="https://opensource.org/licenses/MIT" /> 
-[![pylint](https://img.shields.io/badge/PyLint-10.00-brightgreen?logo=python&logoColor=white) [![PEP8](https://img.shields.io/badge/autopep8%20-checked-green.svg)](https://www.python.org/dev/peps/pep-0008/) [![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/)
+[![pylint](https://img.shields.io/badge/PyLint-10.00-brightgreen?logo=python&logoColor=white)](https://pypi.org/project/pylint/) [![PEP8](https://img.shields.io/badge/autopep8%20-checked-green.svg)](https://www.python.org/dev/peps/pep-0008/) [![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/)
 
 ### Static Analysis Tools Used:
 1. <strong>PyLint</strong>: https://github.com/pylint-dev/pylint
