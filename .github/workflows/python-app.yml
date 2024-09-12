@@ -66,6 +66,6 @@ jobs:
     - name: Running CoverageBadge
       run: |
         coverage-badge -o coverage.svg
-    - name: Run two tests on testfile
+    - name: Run tests on testfile
       run: |
-        python merge_sort_test.py
+        pytest -v
