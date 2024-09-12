@@ -9,4 +9,5 @@
 3. <strong>Pyright</strong>: https://github.com/microsoft/pyright
    
 ### PEP8 Badge sourced from :https://github.com/walidsa3d/pep8-badge
+### Pylint Badge sourced from https://github.com/marketplace/actions/pylint-with-dynamic-badge
 ### Welcome to our Repository :)
